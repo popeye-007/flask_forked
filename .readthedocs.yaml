@@ -1,4 +1,7 @@
 version: 2
+formats:
+  - epub
+  - pdf
 build:
   os: ubuntu-24.04
   tools:
@@ -8,6 +11,4 @@ build:
     - asdf install uv latest
     - asdf global uv latest
     - uv run --group docs sphinx-build -W -b dirhtml docs $READTHEDOCS_OUTPUT/html
-  formats:
-  - epub
-  - pdf
+
